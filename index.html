@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+ <section class="flex flex-col justify-center items-center gap-4 bg-black h-screen">  
+   <!---<img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png " alt="eye-img">--> 
+    <img src=" https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png " alt="bulb-on-img " class="h-44" id="bulb">
+    <img src=" https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" alt="cat-img" class="h-44" id="cat">
+    <!--<img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png" alt="bulb-off-img">-->
+<div class="bg-gray-200 rounded-lg w-[135px] py-2">
+    <p id="para" class="flex flex-col justify-center items-center py-2 ">Switched on</p>
+<div class="flex flex-row justify-center items-center gap-2">
+    <button class="bg-red-500 rounded-lg text-white font-thin text-base px-3 py-2 border border-white "  id="off">OFF</button>
+    <button class="bg-green-500 rounded-lg text-white font-thin text-base px-3 py-2 border border-white" id="on">ON</button>
+</div>
+</div>
+</section> 
+
+    <script>
+const cat = document.getElementById("cat")
+  const bulb = document.getElementById("bulb")
+  const para = document.getElementById("para")
+  const btnoff = document.getElementById("off")
+  const btnon = document.getElementById("on")
+
+  btnon.addEventListener("click", ()=>{
+    console.log("on btn clicked")
+    bulb.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png " 
+    cat.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png"
+    para.textContent = "switched on"
+  })
+
+  btnoff.addEventListener("click", ()=>{
+    console.log("off btn clicked")
+    cat.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png" 
+    bulb.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png"
+    para.textContent = "switched off"
+  })
+
+
+    </script>
+</body>
+</html>
